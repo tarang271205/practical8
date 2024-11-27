@@ -1,0 +1,75 @@
+Program: 8 Foodies is a restaurant established in 2020. Due to rush of customers, the waiters 
+are not able to manage the food supply appropriately. To help them, create a menu 
+ordering system, which allows customers to select the items from the menu and 
+compute the total cost of their order. Use switch case for menu ordering and item 
+selection. 
+Menu includes the following: 
+ Burger - ₹150 
+ Pizza - ₹200 
+ Pasta - ₹120 
+ Sandwich - ₹100 
+ French Fries - ₹80 
+Display the menu to user and allow them to enter the number they wish to order. 
+Calculate the total amount after selection of all items. Ask user to enter ‘0’ after 
+finishing the ordering of items. 
+Code: #include <stdio.h> 
+ 
+void main() { 
+    int choice, total_cost = 0, cost = 0; 
+ 
+    // Display the Restaurant Menu 
+ 
+    printf("Menu Card:\n"); 
+    printf("1. Burger = 150$\n"); 
+    printf("2. Pizza = 200$\n"); 
+    printf("3. Pasta = 120$\n"); 
+    printf("4. Sandwich = 100$\n"); 
+    printf("5. French Fries = 80$\n");
+      printf("0. For Finish your Order.\n"); 
+ 
+    while (1) { 
+        // Take input as customer choice 
+        printf("\nWhatever Do You Wants To Eat Press Correct Number And If You Wants To 
+Complete Your Order then Press 0: "); 
+        scanf("%d", &choice); 
+ 
+        switch (choice) { 
+            case 1: 
+                cost = 150; 
+                printf("Burger is added to your cart"); 
+                break; 
+            case 2: 
+                cost = 200; 
+                printf("Pizza is added to your cart "); 
+                break; 
+            case 3: 
+                cost = 120; 
+                printf("Pasta is added to your cart "); 
+                break; 
+            case 4: 
+                cost = 100; 
+                printf("Sandwich is added to your cart "); 
+                break; 
+            case 5: 
+                cost = 80;
+                 printf("French Fries are added to your cart "); 
+                break; 
+            case 0: 
+                // Print total cost and exit 
+                printf("__________________________________________________________\n"); 
+                printf("Your Total Amount is: %d $\n", total_cost); 
+                printf("\Your Order Will Be Ready In 15 Minutes. \n"); 
+              
+                return; // Exit the program 
+            default: 
+                // Handle invalid input 
+                printf("Invalid input! Please Enter Valid Number"); 
+              
+                continue; // Skip the rest of the loop and prompt again 
+        } 
+        total_cost += cost; // Add item cost to total cost 
+    } 
+      
+} 
+ printf("24CE032_TARANG");
+ }
